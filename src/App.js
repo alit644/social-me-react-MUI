@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import "./App.css";
 import { createTheme, Button, CssBaseline, ThemeProvider } from "@mui/material";
 import getDesignTokens from "./style/Mytheme";
+import AppBarr from "components/AppBar";
 
 function App() {
   const [mode, setmyMode] = useState(localStorage.getItem("theme") || "light");
@@ -12,6 +13,12 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <div className="App">
+
+        <AppBarr/>
+
+        <br />
+        <br />
+        <br />
         <Button
           onClick={() => {
             localStorage.setItem(
